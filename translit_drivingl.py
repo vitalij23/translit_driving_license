@@ -46,7 +46,7 @@ class RulesNew:
     }
     mapping = (
         u'АБВГДЕ' + 'З' + 'ИЙКЛМНОПРСТУФ' + 'ЫЬЭ',#ЕЁЖ  #И  #ХЦЧШЩ  #ЮЯ",
-        u'ABVGDE' + 'Z' + 'IYKLMNOPRSTUF' + 'Y\'e',
+        u'ABVGDE' + 'Z' + 'IIKLMNOPRSTUF' + 'Y\'e',
     )
 
     multi_mapping = {  # Ж ХЦЧШЩ ЮЯ
@@ -160,3 +160,7 @@ if __name__ == '__main__':  # test
     if not check('УКРАИНА', 'UKRAINA',
                  p3=True):  # /mnt/hit4/hit4user/PycharmProjects/cnn/samples/passport_and_vod/0/29-327-0.png
         print('fail11')
+
+    print(translit('ХУССЕЙН', RulesNew))
+    print('KHUSSEIN')
+    print(check('ХУССЕЙН', 'KHUSSEIN'))
